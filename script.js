@@ -25,6 +25,7 @@ var debts = [
 	{ id: 4, is_income: false, is_given: false, name: "Odam2", amount: "53000" },
 	{ id: 5, is_income: true, is_given: true, name: "Odam1", amount: "567000" },
 	{ id: 6, is_income: false, is_given: true, name: "Odam4", amount: "53000" },
+	{ id: 7, is_income: false, is_given: false, name: "Odamello Modamello", amount: "53000" },
 ]
 // alert(`${window.innerWidth}px ${window.innerHeight}px`);
 var template, content, cardContainer = document.querySelector(".card-container");

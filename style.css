@@ -85,6 +85,18 @@ svg {
 	inset: auto 4vw 4vw auto;
 }
 
-/* .btn-add-debt {
-    background-color: var(--bs-cyan) !important;
-} */
+.card-ud {
+	font-size: 1.5em;
+}
+
+.btn-add-debt {
+	font-size: 2em;
+	aspect-ratio: 1;
+    display: grid;
+    place-items: center;
+}
+
+.navbar-toggler:focus {
+	outline: none;
+	box-shadow: 0 0 0 0 !important;
+}
