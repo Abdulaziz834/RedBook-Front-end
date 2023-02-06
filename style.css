@@ -21,6 +21,8 @@ h6,
 .card-subtitle {
 	width: max-content;
 	white-space: nowrap;
+	text-align: center;
+	margin-inline: auto;
 }
 
 .card-title>a {
@@ -99,4 +101,14 @@ svg {
 .navbar-toggler:focus {
 	outline: none;
 	box-shadow: 0 0 0 0 !important;
+}
+
+.card.income:not(.debt) {
+	display: grid;
+	grid-template-columns: 1fr auto;
+	align-items: center;
+}
+
+.card.income:not(.debt) .card-title {
+	color: var(--bs-primary);
 }
