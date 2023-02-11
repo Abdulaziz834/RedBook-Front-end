@@ -38,6 +38,12 @@ function formatDateTime(date, format) {
 	return console.error("Unsupported format provided");
 }
 
+function formatAmount(amount, n = 1) {
+	if (n) {
+		return reverseText(reverseText(amount).match(/.{1,3}/g).join(" ")) + " so'm"
+	}
+}
+
 var debts = [
 	{ id: 1, is_income: true, is_given: false, name: "Odam1", amount: "453000", date: new Date("2023-01-27 09:12") },
 	{ id: 2, is_income: false, is_given: true, name: "Odam2", amount: "178000", date: new Date("2023-01-27 10:42") },
@@ -65,14 +71,14 @@ for (let debt of debts) {
 	debtContent.querySelector(".debt").classList.add(cardClass);
 
 	if (debt.is_given) {
-		debtContent.querySelector("object.card-img-top").setAttribute("data", "./assets/icons/circle-check.svg");
+		debtContent.querySelector("object.card-img-top").setAttribute("data", "../assets/icons/circle-check.svg");
 	}
 	else {
-		debtContent.querySelector("object.card-img-top").setAttribute("data", "./assets/icons/circle-empty.svg");
+		debtContent.querySelector("object.card-img-top").setAttribute("data", "../assets/icons/circle-empty.svg");
 	}
 
 	debtContent.querySelector(".card-title > a").innerText = debt.name;
-	debtContent.querySelector(".card-subtitle").innerText = reverseText(reverseText(debt.amount).match(/.{1,3}/g).join(" ")) + " so'm";
+	debtContent.querySelector(".card-subtitle").innerText = formatAmount(debt.amount);
 	debtContent.querySelector(".card-text.small").innerHTML = formatDateTime(debt.date, "datetime")
 	debtsContainer.append(debtContent);
 }
@@ -92,7 +98,7 @@ for (let income of dailyIncome) {
 	incomeTemplate = document.querySelector("template#income"),
 	incomeContent = incomeTemplate.content.cloneNode(true);
 		
-	incomeContent.querySelector(".card-title").innerText = reverseText(reverseText(income.amount).match(/.{1,3}/g).join(" ")) + " so'm";
+	incomeContent.querySelector(".card-title").innerText = formatAmount(income.amount);
 	incomeContent.querySelector(".card-text.small").innerHTML = formatDateTime(income.date, 'date')
 	incomeContainer.append(incomeContent)
 
