@@ -51,7 +51,7 @@ h6,
 
 .card-img-top {
   padding: 1em;
-  width: 66px;
+  width: clamp(1rem, 15vw, 4rem);
   aspect-ratio: 1;
 }
 
