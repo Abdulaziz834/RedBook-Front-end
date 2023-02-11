@@ -23,32 +23,73 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light navbar-collapse">
+    <nav class="navbar fixed-top navbar-expand-sm navbar-light bg-light navbar-collapse">
 		<div class="container-fluid">
-			<a class="navbar-brand text-danger" href="#">Red Book</a>
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-				data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-				aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-					<li class="nav-item">
-						<a class="nav-link" href="#"><i class="bi bi-wallet"></i> All debts</a>
-					</li>
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-							data-bs-toggle="dropdown" aria-expanded="false">
-							<i class="bi bi-bar-chart-fill"></i> Reports
-						</a>
-						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<li><a class="dropdown-item" href="#">Monthly Debts</a></li>
-							<li><a class="dropdown-item" href="#">Annual Debts</a></li>
-						</ul>
-					</li>
+		  <a class="navbar-brand text-danger" href="../home/index.html">Red Book</a>
+		  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+			  <li class="nav-item">
+				<a class="nav-link" href="#"><i class="bi bi-wallet"></i> All debts</a>
+			  </li>
+			  <li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+				  <i class="bi bi-bar-chart-fill"></i> Reports
+				</a>
+				<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+				  <li><a class="dropdown-item" href="#">Monthly Debts</a></li>
+				  <li><a class="dropdown-item" href="#">Annual Debts</a></li>
 				</ul>
-			</div>
+			  </li>
+			</ul>
+		  </div>
 		</div>
-	</nav>
+	  </nav>
+	  
+	  <div class="container mt-5 pt-5 px-5">
+		<div class="card income debt debt-preview px-3 mx-auto">
+		  <object data="../assets/icons/circle-empty.svg" class="card-img-top"></object>
+		  <div class="card-body">
+			<h5 class="card-title" translate="no">Odam Katowice</h5>
+			<h6 class="card-subtitle mb-2" translate="no">100 000 so'm</h6>
+		  </div>
+		  <div class="card-footer">
+			<p class="card-text small">27 Jan 2022<br>13:45</p>
+		  </div>
+	  
+		</div>
+	  </div>
+	  
+	  <form class="container my-5" method="POST">
+		<div class="my-2">
+		  <label class="form-label" for="giver-name">First Name: </label>
+		  <input type="text" id="giver-name" class="form-control" name="giver-name" placeholder="Odam Katowice" autocapitalize="sentences">
+		</div>
+		<div class="input-group flex-nowrap my-2 align-items-end">
+		  <div class="row">
+			<div class="col">
+			  <label class="form-label" for="amount">Amount: </label>
+			  <div class="input-group">
+				<input type="number" id="amount" class="form-control" step="1000" name="amount" placeholder="100 000" inputmode="numeric">
+				<span class="input-group-text">so'm</span>
+			  </div>
+	  
+			</div>
+		  </div>
+		  <div class="row">
+			<div class="col">
+			  <div class="form-check">
+				<input class="form-check-input" autocomplete="off" type="checkbox" checked id="is-income" name="is-income">
+				<label class="form-check-label" for="is-income">Income</label>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		<div class="my-3">
+		  <button class="btn btn-primary" type="submit">Add Debt</button>
+		</div>
+	  </form>
 </body>
 </html>
