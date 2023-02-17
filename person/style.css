@@ -1,0 +1,77 @@
+.h5,
+h5 {
+  font-size: 1.25em;
+}
+
+h6,
+.h6 {
+  font-size: 1em !important;
+}
+
+.search-box {
+  grid-template-areas: "stack";
+  justify-items: end;
+}
+
+.card-body {
+  padding: 1rem 0 !important;
+}
+
+.card-title {
+  width: max-content;
+  white-space: nowrap;
+}
+
+.card-title > a {
+  color: currentColor;
+  text-decoration: none;
+}
+
+.debt.income .card-title {
+  color: var(--bs-primary);
+}
+
+.debt.outcome .card-title {
+  color: var(--bs-danger);
+}
+
+.debt {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  place-items: center;
+  font-size: clamp(0.75rem, 1vw, 1.25rem);
+}
+
+.card-text.small {
+  margin: 0 !important;
+  width: max-content;
+  white-space: nowrap;
+}
+
+.card-img-top {
+  padding: 1em;
+  width: clamp(1rem, 15vw, 4rem);
+  aspect-ratio: 1;
+}
+
+svg {
+  width: auto !important;
+}
+
+.card-footer {
+  background-color: transparent;
+  border: 0;
+}
+.search-box > * {
+  grid-area: stack;
+}
+
+.container {
+  max-width: 40rem;
+}
+
+.card-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(var(--limit-width, 24rem), 1fr));
+	gap: 1rem;
+}
