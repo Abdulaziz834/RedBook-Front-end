@@ -9,6 +9,9 @@ var debts = [
 	{ id: 6, is_income: true, is_given: true, name: "Odam4", amount: "53000", date: new Date("2023-01-28 11:06") },
 	{ id: 7, is_income: false, is_given: false, name: "Odam1", amount: "357000", date: new Date("2023-01-29 08:59") },
 	{ id: 8, is_income: false, is_given: false, name: "Odamello Modamello", amount: "53000", date: new Date("2023-01-29 12:29") },
+	{ id: 6, is_income: false, is_given: true, name: "Odam4", amount: "53000", date: new Date("2023-01-28 11:06") },
+	{ id: 7, is_income: true, is_given: false, name: "Odam1", amount: "357000", date: new Date("2023-01-29 08:59") },
+	{ id: 8, is_income: false, is_given: false, name: "Eng uzun otli odam", amount: "53000", date: new Date("2023-01-29 12:29") },
 ]
 // alert(`${window.innerWidth}px ${window.innerHeight}px`);
 var debtTemplate, debtContent, debtsContainer = document.querySelector("#recent-debts .card-container");
