@@ -8,6 +8,10 @@ h6,
   font-size: 1em !important;
 }
 
+.navbar-nav .nav-item {
+  border-top: 1px solid ;
+}
+
 .search-box {
   grid-template-areas: "stack";
   justify-items: end;

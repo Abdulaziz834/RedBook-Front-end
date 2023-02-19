@@ -83,10 +83,26 @@ svg {
 	grid-area: stack;
 }
 
-.card-container {
+.block:last-child {
+    border-bottom: 0px solid !important;
+}
+
+.debts-block {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(var(--limit-width), 1fr));
 	gap: 1rem;
+}
+
+.debt-date {
+    width: fit-content;
+    top: 4rem;
+    z-index: 1;
+}
+
+@media (min-width: 768px) {
+    .debt-date {
+        top: 5rem;
+    }
 }
 
 .btn-container {

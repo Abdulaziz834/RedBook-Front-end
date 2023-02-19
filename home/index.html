@@ -21,37 +21,44 @@
 </head>
 
 <body>
-	<nav class="navbar fixed-top navbar-expand-md navbar-light bg-light navbar-collapse">
-		<div class="container-fluid">
-			<a class="navbar-brand text-danger" href="#">Red Book</a>
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-				data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-				aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-					<li class="nav-item">
-						<a class="nav-link" href="#"><i class="bi bi-wallet"></i> All debts</a>
-					</li>
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-							data-bs-toggle="dropdown" aria-expanded="false">
-							<i class="bi bi-bar-chart-fill"></i> Reports
-						</a>
-						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<li><a class="dropdown-item" href="#">Monthly Debts</a></li>
-							<li><a class="dropdown-item" href="#">Annual Debts</a></li>
-						</ul>
-					</li>
-				</ul>
-				<form class="d-grid search-box" method="GET">
-					<input class="form-control" type="search" placeholder="Search" aria-label="Search" name="query">
-					<button class="btn btn-success" type="submit"><i class="bi bi-search"></i></button>
-				</form>
-			</div>
-		</div>
-	</nav>
+	<nav class="navbar navbar-dark bg-dark fixed-top navbar-expand-md navbar-collapse">
+        <div class="container-fluid">
+            <a class="navbar-brand text-danger" href="#"><strong>Red Book</strong></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse gap-3 p-2" id="navbarSupportedContent">
+                <form class="d-grid search-box" method="GET">
+                    <input class="form-control bg-dark text-light form-control-sm" type="search" placeholder="Search"
+                        aria-label="Search" name="query">
+                </form>
+                <ul class="navbar-nav me-auto mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../all-debts/index.html">All Debts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">All People</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Reports
+                        </a>
+                        <ul class="dropdown-menu mb-3" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Weekly Debts</a></li>
+                            <li><a class="dropdown-item" href="#">Monthly Debts</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Settings</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
 
 
 
