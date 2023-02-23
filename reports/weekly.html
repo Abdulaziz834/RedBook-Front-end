@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=0.85">
-    <title>RedBook Home Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Debt</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
@@ -13,6 +13,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"
         defer></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.2.1/dist/chart.umd.min.js" defer></script>
 
     <script src="../main_script.js" defer></script>
 
@@ -30,13 +32,9 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse gap-3 p-2" id="navbarSupportedContent">
-                <form class="d-grid search-box" method="GET">
-                    <input class="form-control bg-dark text-light form-control-sm" type="search" placeholder="Search"
-                        aria-label="Search" name="query">
-                </form>
                 <ul class="navbar-nav me-auto mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">All Debts</a>
+                        <a class="nav-link" href="../all-debts/index.html">All Debts</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -44,7 +42,7 @@
                             Reports
                         </a>
                         <ul class="dropdown-menu mb-3" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="../reports/weekly.html">Weekly Debts</a></li>
+                            <li><a class="dropdown-item" href="#">Weekly Debts</a></li>
                             <li><a class="dropdown-item" href="../reports/monthly.html">Monthly Debts</a></li>
                         </ul>
                     </li>
@@ -56,45 +54,6 @@
             </div>
         </div>
     </nav>
-    <div class="container block-parent mt-5 pt-5">
-        <h1 class="title">All debts</h1>
-        <div class="block d-flex mb-5 pb-5 border-bottom border-secondary justify-content-center flex-column gap-5">
-            <time class="badge bg-secondary position-sticky rounded-pill start-50 translate-middle-x debt-date"></time>
-            <div class="debts-block" style="--limit-width: 24rem"></div>
-        </div>
-    </div>
-
-    <nav class="navbar fixed-bottom add-debt-container">
-		<a href="../add-debts/index.html" class="btn btn-primary btn-add-debt"><object data="../assets/icons/btn-plus.svg"></object></a>
-	</nav>
-
-
-    <template id="block">
-        <div class="block d-flex my-5 pb-5 border-bottom border-secondary justify-content-center flex-column gap-5">
-            <time class="badge bg-secondary position-sticky rounded-pill start-50 translate-middle-x debt-date"></time>
-            <div class="debts-block" style="--limit-width: 24rem"></div>
-        </div>
-    </template>
-
-
-    <template id="debt">
-        <div class="card debt">
-            <object class="card-img-top"></object>
-            <div class="card-body">
-                <h5 class="card-title" translate="no"><a href="#">Odam4</a></h5>
-                <h6 class="card-subtitle mb-2" translate="no">981000</h6>
-            </div>
-            <div class="card-footer">
-                <p class="card-text small">27 Jan 2022<br>13:45</p>
-                <div class="card-ud">
-                    <a href="#"><i class="bi bi-pencil-square"></i></a>
-                    <a href="#"><i class="bi bi-trash3"></i></a>
-                    <a href="#" class="btn-send"><i class="bi bi-box-arrow-up"></i></a>
-                </div>
-            </div>
-        </div>
-    </template>
-
 
 </body>
 

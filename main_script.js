@@ -29,3 +29,20 @@ function formatAmount(amount, n = 1) {
 		return reverseText(reverseText(amount).match(/.{1,3}/g).join(" ")) + " so'm"
 	}
 }
+
+var searchInput = document.querySelector("input.form-control[type=search]"),
+	navList = document.querySelector("ul.navbar-nav"),
+	searchContainer = document.querySelector(".container");
+
+if (window.innerWidth < 768) {
+	searchInput.oninput = e => {
+		if (searchInput.value) {
+			navList.classList.toggle("hide", true);
+			searchContainer.classList.toggle("pt-5", true)
+		}
+		else {
+			navList.classList.toggle("hide", false);
+			searchContainer.classList.toggle("pt-5", false)
+		}
+	}
+}

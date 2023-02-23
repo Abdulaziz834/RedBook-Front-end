@@ -13,6 +13,14 @@ h6,
 	justify-items: end;
 }
 
+.no-line-break {
+    white-space: nowrap !important;
+}
+
+.justify-items-center {
+    justify-items: center !important;
+}
+
 @media (max-width: 768px) {
 	.search-box {
 		margin-bottom: 1rem !important;
@@ -83,10 +91,11 @@ svg {
 	grid-area: stack;
 }
 
-.card-container {
+.info-container {
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(var(--limit-width), 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
 	gap: 1rem;
+    justify-items: center;
 }
 
 .btn-container {
@@ -130,6 +139,10 @@ svg {
 	pointer-events: none;
 }
 
+.text-add-info {
+    white-space: nowrap;
+}
+
 .form-control-sm {
 	padding: .25rem 1rem;
 	box-shadow: none !important;
@@ -145,8 +158,4 @@ input.form-control {
 
 .nav-link {
 	color: var(--bs-gray-300)
-}
-
-.navbar-nav.hide {
-	display: none !important;
 }

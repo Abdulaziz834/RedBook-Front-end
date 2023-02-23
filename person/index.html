@@ -14,7 +14,7 @@
 		crossorigin="anonymous" defer></script>
     
     
-    <script src="../main_script.js"></script>
+    <script src="../main_script.js" defer></script>
 	<script src="./script.js" defer></script>
 	<link rel="stylesheet" href="style.css">
 </head>
@@ -28,16 +28,9 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse gap-3 p-2" id="navbarSupportedContent">
-                <form class="d-grid search-box" method="GET">
-                    <input class="form-control bg-dark text-light form-control-sm" type="search" placeholder="Search"
-                        aria-label="Search" name="query">
-                </form>
                 <ul class="navbar-nav me-auto mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link" href="../all-debts/index.html">All Debts</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">All People</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -45,12 +38,12 @@
                             Reports
                         </a>
                         <ul class="dropdown-menu mb-3" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Weekly Debts</a></li>
-                            <li><a class="dropdown-item" href="#">Monthly Debts</a></li>
+                            <li><a class="dropdown-item" href="../reports/weekly.html">Weekly Debts</a></li>
+                            <li><a class="dropdown-item" href="../reports/monthly.html">Monthly Debts</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Settings</a>
+                        <a class="nav-link" href="../settings/index.html">Settings</a>
                     </li>
                 </ul>
 
@@ -80,6 +73,9 @@
     <hr>
     <div class="container card-container mb-5">
     </div>
+    <nav class="navbar fixed-bottom add-debt-container">
+		<a href="../add-debts/index.html" class="btn btn-primary btn-add-debt"><object data="../assets/icons/btn-plus.svg"></object></a>
+	</nav>
     <template id="debt">
         <div class="card debt">
 			<object class="card-img-top"></object>

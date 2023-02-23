@@ -30,13 +30,9 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse gap-3 p-2" id="navbarSupportedContent">
-                <form class="d-grid search-box" method="GET">
-                    <input class="form-control bg-dark text-light form-control-sm" type="search" placeholder="Search"
-                        aria-label="Search" name="query">
-                </form>
                 <ul class="navbar-nav me-auto mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">All Debts</a>
+                        <a class="nav-link" href="../all-debts/index.html">All Debts</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -49,51 +45,38 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../settings/index.html">Settings</a>
+                        <a class="nav-link" href="#">Settings</a>
                     </li>
                 </ul>
 
             </div>
         </div>
     </nav>
-    <div class="container block-parent mt-5 pt-5">
-        <h1 class="title">All debts</h1>
-        <div class="block d-flex mb-5 pb-5 border-bottom border-secondary justify-content-center flex-column gap-5">
-            <time class="badge bg-secondary position-sticky rounded-pill start-50 translate-middle-x debt-date"></time>
-            <div class="debts-block" style="--limit-width: 24rem"></div>
-        </div>
+
+    <div class="container pt-5 mt-5">
+        <h2 class="title">Personal Profile</h2>
+        <hr>
+        <form action="" method="POST">
+            <div class="stack my-4">
+                <label for="f-name" class="form-label">First Name</label>
+                <input type="text" name="fname" id="f-name" placeholder="A" class="form-control w-25 form-control-sm" autocomplete="given-name">
+
+            </div>
+            <div class="stack my-4">
+
+                <label for="login-name" class="form-label">Login</label>
+                <input type="text" name="login" id="login-name" placeholder="A" class="form-control w-25 form-control-sm">
+                <p class="small text-secondary mt-2">Please remember your login since you should authentificate with it.</p>
+            </div>
+            <div class="stack my-4">
+
+                <label for="user-email" class="form-label">E-mail</label>
+                <input type="email" name="email" id="user-email" placeholder="A" class="form-control w-25 form-control-sm" autocomplete="email">
+            </div>
+            <button class="btn btn-success">Update profile</button>
+        </form>
     </div>
 
-    <nav class="navbar fixed-bottom add-debt-container">
-		<a href="../add-debts/index.html" class="btn btn-primary btn-add-debt"><object data="../assets/icons/btn-plus.svg"></object></a>
-	</nav>
-
-
-    <template id="block">
-        <div class="block d-flex my-5 pb-5 border-bottom border-secondary justify-content-center flex-column gap-5">
-            <time class="badge bg-secondary position-sticky rounded-pill start-50 translate-middle-x debt-date"></time>
-            <div class="debts-block" style="--limit-width: 24rem"></div>
-        </div>
-    </template>
-
-
-    <template id="debt">
-        <div class="card debt">
-            <object class="card-img-top"></object>
-            <div class="card-body">
-                <h5 class="card-title" translate="no"><a href="#">Odam4</a></h5>
-                <h6 class="card-subtitle mb-2" translate="no">981000</h6>
-            </div>
-            <div class="card-footer">
-                <p class="card-text small">27 Jan 2022<br>13:45</p>
-                <div class="card-ud">
-                    <a href="#"><i class="bi bi-pencil-square"></i></a>
-                    <a href="#"><i class="bi bi-trash3"></i></a>
-                    <a href="#" class="btn-send"><i class="bi bi-box-arrow-up"></i></a>
-                </div>
-            </div>
-        </div>
-    </template>
 
 
 </body>

@@ -143,10 +143,19 @@ input.form-control {
 	border: var(--bs-border-width) solid var(--bs-gray-600) !important;
 }
 
-.nav-link {
-	color: var(--bs-gray-300)
+input.form-control-sm {
+	transition: background-color 150ms linear;
 }
 
-.navbar-nav.hide {
-	display: none !important;
+input.form-control-sm:not(:placeholder-shown) {
+	background-color: #f6f8fa;
+}
+
+input.form-control-sm::placeholder {
+	color: transparent;
+}
+
+
+.nav-link {
+	color: var(--bs-gray-300)
 }
