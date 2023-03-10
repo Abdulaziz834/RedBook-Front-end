@@ -150,3 +150,9 @@ input.form-control {
 .navbar-nav.hide {
 	display: none !important;
 }
+
+.grid-right {
+	grid-column: 1 / -1;
+    width: fit-content;
+    margin-left: auto;
+}

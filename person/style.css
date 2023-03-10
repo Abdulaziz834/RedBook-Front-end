@@ -54,8 +54,8 @@ h6,
   aspect-ratio: 1;
 }
 
-svg {
-  width: auto !important;
+object {
+	pointer-events: none;
 }
 
 .card-footer {
@@ -203,4 +203,9 @@ input.form-control {
 
 .nav-link {
 	color: var(--bs-gray-300)
+}
+
+.grid-right {
+	width: fit-content;
+	margin-left: auto;
 }
